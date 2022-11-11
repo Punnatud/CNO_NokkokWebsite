@@ -1,23 +1,19 @@
 <template>
-    <div class="flex justify-center min-h-screen bg-emerald-800 ">
-    <div>
-       <profileCard
-        name = "Patinya Saichantadee"
-        nickname = "tonnow"
-        team = "CNO"
-       ></profileCard> 
-    </div>
-    <div class="">
+    <div class=" min-h-screen bg-emerald-800 ">
+     <div class="flex justify-center pt-32">
         <profileCard
-        :name ="name"
-        :nickname = "nickname"
-        :team = "team"
-        ></profileCard>
-    </div>
-    <div class="">
-        <profileCard>
-            name =""
+        v-for="member in members" :key="member"
+        :name="member.name"
+        :nickname="member.nickname"
+        :team="member.team"
+        :profile="member.profile">
         </profileCard>
+    </div>
+
+    <div class="flex justify-center text-center p-10">
+        <router-link to ="/" class="font-bold text-blue-100 p-10 bg-emerald-400 rounded-lg hover:bg-emerald-300 scale-100 hover:scale-105">
+            Go back to sing a song
+        </router-link>     
     </div>
     </div>
 </template>
@@ -26,9 +22,28 @@ import profileCard from '../components/Profile.vue'
     export default{
         data(){
             return{
-                name: "Punnatud Duengkae",
-                nickname: "Nokkok",
-                team: "CNO"
+            members:[
+                {
+                    name: "Patinya Saichantadee",
+                    nickname: "Cold",
+                    team: "CNO",
+                    profile: "/assets/images/cold.jpg"
+
+                },
+                {
+                    name: "Punnatud Duengkae",
+                    nickname: "Nokkok",
+                    team: "CNO",
+                    profile: "/assets/images/profile.jpg"
+                },
+                {
+                    name: "Sittipong Hemloum",
+                    nickname: "Ong",
+                    team: "CNO",
+                    profile: "/assets/images/ong.jpg"
+
+                }
+            ]
             }
         },
         components: {

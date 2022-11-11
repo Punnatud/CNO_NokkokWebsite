@@ -3,7 +3,9 @@
                 text-blue-100 text-center mx-4 my-4">
         <div class="flex justify-center ">
         <a href="http://www.google.com" class="cursor-pointer">
-            <img  src="../assets/images/default.jpg" alt="" class=" w-52 h-52 rounded-full shadow-lg "/>
+            <div class=" w-52 h-52 ">
+                <div class="rounded-full h-full bg-cover bg-center bg-no-repeat shadow-lg" :style="imagePath(profile)"></div>
+            </div>
         </a>
         </div>
         <div class="p-6">
@@ -30,16 +32,17 @@
             },
             profile: {
                 type: String,
-                default: "https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
+                default: "/assets/images/default.jpg"
             }
             
         },
-        imagePath(image){
-            let url;
-            url = new URL(image);
-            return url;
-        }
 
+        methods:{
+
+        imagePath(image){
+            return {'background-image' : 'url("./src/'+ image +'")'};
+        }
+        }
 
     }
 </script>

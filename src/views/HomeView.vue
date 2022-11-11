@@ -76,8 +76,19 @@ You, baby
 All I want for Christmas is you, baby [repeat with ad-libs until fade]
     </p>
     </div>
-      <router-link to="/Profile" class="text-white mx-10 p-10 my-96 bg-red-600 max-h-28 relative top-80 rounded-lg scale-100 hover:scale-105 hover:bg-red-400 shadow-lg" >
-        Go to Profile
+      <router-link to="/Profile" class="text-white mx-10 p-10 my-96 bg-red-600 max-h-28 relative top-80 rounded-lg scale-100 hover:scale-105 hover:bg-red-400 shadow-lg text-center" >
+        Profiles
       </router-link>
+    <div class="p-10 bg-slate-700 min-h-screen flex-col hover:text-red-700">
+      <h1 class="font-semibold text-blue-200 text-center text-5xl p-10">Let sing together!!</h1>
+      <div class="flex">
+        <img src="https://media.tenor.com/JvS5I6vOxGQAAAAM/feliznavidad-santa-dance.gif" alt="" class="h-24 w-24 ml-2" v-for="n in 7" :key="n">
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/aAkMkVFwAoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+      class="shadow-lg my-20 ml-9"></iframe>
+      <div class="flex">
+        <img src="https://media.tenor.com/JvS5I6vOxGQAAAAM/feliznavidad-santa-dance.gif" alt="" class="h-24 w-24 ml-2" v-for="n in 7" :key="n">
+      </div>
+    </div>
   </div>
 </template>
